@@ -1,10 +1,33 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const test = [[${mya}]];
+        console.log(test)
+    </script>
+    <style>
+        .mystyle{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+        }
+    </style>
 </head>
 <body>
-$END$
+<p  th:text="${aa}">
+    원래 문자열 입니다
+</p>
+<ul>
+    <li th:each="name:${alist}">
+        [[${name}]]
+    </li>
+</ul>
+<div th:if="${mytrue}">
+    true면 나옵나다...
+</div>
+
 </body>
 </html>

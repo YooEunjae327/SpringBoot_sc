@@ -15,7 +15,7 @@ public class MyConfig {
     public B b() {
         return new B();
     }
-    
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
